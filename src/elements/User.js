@@ -15,7 +15,7 @@ export const User=()=>{
         axios
           .get("https://crud-backend-api-beta.vercel.app")
           .then(res =>setusers(res.data) )
-          .catch(err => console.long(err));
+          .catch(err => console.log(err));
     },[])
 
     const handleDelete=(id)=>{
