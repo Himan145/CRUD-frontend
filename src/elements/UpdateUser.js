@@ -11,7 +11,7 @@ export const UpdateUser=()=>{
     const navigate=useNavigate()
 
     useEffect(()=>{
-        axios.get('http://localhost:5000/get/'+id)
+        axios.get('https://crud-backend-api-beta.vercel.app/get/'+id)
         .then(res=>{
             console.log(res);
             setName(res.data.name);
@@ -23,7 +23,7 @@ export const UpdateUser=()=>{
 
     const Update=(e)=>{
         e.preventDefault();
-        axios.put("http://localhost:5000/update/"+id,{name,email,age})
+        axios.put("https://crud-backend-api-beta.vercel.app/update/"+id,{name,email,age})
         .then(res=>{
             console.log(res);
             navigate("/");
