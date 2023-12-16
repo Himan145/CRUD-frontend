@@ -10,7 +10,7 @@ export const User=()=>{
             Age:20
         }
     ]);
-
+    axios.defaults.withCredentials=true;
     useEffect(()=>{
         axios
           .get("https://crud-backend-api-beta.vercel.app")
