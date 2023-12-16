@@ -7,7 +7,7 @@ export const CreateUser=()=>{
     const [email,setEmail]=useState()
     const [age,setAge]=useState()
     const navigate=useNavigate()
-
+    axios.defaults.withCredentials=true;
     const Submit=(e)=>{
         e.preventDefault();
         axios.post("https://crud-backend-api-beta.vercel.app/create",{name,email,age})
