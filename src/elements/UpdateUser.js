@@ -9,7 +9,7 @@ export const UpdateUser=()=>{
     const [email,setEmail]=useState()
     const [age,setAge]=useState()
     const navigate=useNavigate()
-
+    axios.defaults.withCredentials=true;
     useEffect(()=>{
         axios.get('https://crud-backend-api-beta.vercel.app/get/'+id)
         .then(res=>{
