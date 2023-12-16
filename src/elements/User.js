@@ -13,13 +13,13 @@ export const User=()=>{
 
     useEffect(()=>{
         axios
-          .get("http://localhost:5000")
+          .get("https://crud-backend-api-beta.vercel.app")
           .then(res =>setusers(res.data) )
           .catch(err => console.error(err));
     },[])
 
     const handleDelete=(id)=>{
-        axios.delete('http://localhost:5000/delete/'+id)
+        axios.delete('https://crud-backend-api-beta.vercel.app/delete/'+id)
         .then(res=>{
             console.log(res);
             window.location.reload();
