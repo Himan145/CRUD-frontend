@@ -10,7 +10,7 @@ export const CreateUser=()=>{
 
     const Submit=(e)=>{
         e.preventDefault();
-        axios.post("http://localhost:5000/create",{name,email,age})
+        axios.post("https://crud-backend-api-beta.vercel.app/create",{name,email,age})
         .then(result=>{
             console.log(result);
             navigate("/");
